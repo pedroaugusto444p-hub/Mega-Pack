@@ -143,115 +143,134 @@ export default function App() {
       </div>
 
       {/* 2. MAIN HEADER & HERO SECTION */}
-      <section id="hero-section" className="relative py-12 md:py-20 px-4 max-w-7xl mx-auto text-center">
-        {/* Age Indicator */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-800 font-semibold text-xs md:text-sm uppercase tracking-wide mb-6 border border-blue-200 shadow-sm animate-pulse-slow">
-          <Smile className="w-4 h-4 text-blue-600 fill-blue-100" /> Para niños y niñas de 3 a 6 años
-        </div>
+      <section id="hero-section" className="relative py-12 lg:py-24 px-4 max-w-7xl mx-auto">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+          <div className="text-center lg:text-left">
+            {/* Age Indicator */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-800 font-semibold text-xs md:text-sm uppercase tracking-wide mb-6 border border-blue-200 shadow-sm animate-pulse-slow">
+              <Smile className="w-4 h-4 text-blue-600 fill-blue-100" /> Para niños y niñas de 3 a 6 años
+            </div>
 
-        {/* Main Pitch */}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto text-blue-900">
-          Activa la <span className="underline decoration-wavy decoration-3 underline-offset-4 decoration-orange-500">Precisión Escritora</span> de tu hijo con el <span className="text-blue-700">Protocolo Neuro-Manos 2.0</span>
-        </h1>
+            {/* Main Pitch */}
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-blue-900">
+              Activa la <span className="underline decoration-wavy decoration-3 underline-offset-4 decoration-orange-500">Precisión Escritora</span> de tu hijo con el <span className="text-blue-700">Protocolo Neuro-Manos 2.0</span>
+            </h1>
 
-        {/* Subtitle */}
-        <p className="mt-6 text-base md:text-lg text-stone-600 max-w-3xl mx-auto leading-relaxed">
-          El Ritual Diario de 15 Minutos que Fortalece el <strong className="text-orange-600">"Agarre de Pinça"</strong> y la Coordinación Motora en Tiempo Récord.
-          <span className="block mt-4 text-stone-550 text-xs md:text-sm lg:text-base font-normal max-w-2xl mx-auto">
-            Un sistema de Estimulación Neuro-Motora con <strong className="bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200 text-orange-700 font-extrabold">+1.250 actividades</strong> estratégicamente ordenadas para preparar las manos de tu pequeño antes de su primer día de clases.
-          </span>
-          <span className="block mt-4 text-blue-600 font-extrabold text-sm uppercase tracking-wider animate-bounce">👇 Mira el material por dentro 👇</span>
-        </p>
+            {/* Subtitle */}
+            <p className="mt-6 text-base md:text-lg text-stone-600 leading-relaxed max-w-3xl mx-auto lg:mx-0">
+              El Ritual Diario de 15 Minutos que Fortalece el <strong className="text-orange-600">"Agarre de Pinza"</strong> y la Coordinación Motora en Tiempo Récord.
+              <span className="block mt-4 text-stone-550 text-xs md:text-sm lg:text-base font-normal">
+                Un sistema de Estimulación Neuro-Motora con <strong className="bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200 text-orange-700 font-extrabold">+1.250 actividades</strong> estratégicamente ordenadas para preparar las manos de tu pequeño antes de su primer día de clases.
+              </span>
+              <span className="block mt-6 text-blue-600 font-extrabold text-sm uppercase tracking-wider animate-bounce">👇 Mira el material por dentro 👇</span>
+            </p>
 
-        {/* 3. VIDEO / PREVIEW MOCKUP */}
-        <div id="video-preview" className="relative mt-8 max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-stone-800 bg-stone-900 group">
-          
-          {/* Animated Worksheet Showcase inside the "Video Player" */}
-          <div className="aspect-video relative flex items-center justify-center bg-stone-950 overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute inset-0 opacity-40 bg-[radial-gradient(#22c55e_1px,transparent_1px)] [background-size:16px_16px]"></div>
-            
-            {!isPlaying ? (
-              <div className="relative z-10 p-6 text-center select-none">
-                {/* Book design mockup preview */}
-                <div className="relative w-40 h-52 mx-auto bg-gradient-to-tr from-emerald-500 to-green-300 rounded-xl shadow-lg border-2 border-white flex flex-col justify-between p-3 rotate-[-3deg] transition transform hover:rotate-0 hover:scale-105 duration-350">
-                  <div className="absolute -top-3 -right-3 bg-red-500 text-white text-[10px] uppercase font-bold py-1 px-2.5 rounded-full shadow-md transform rotate-12">
-                    RÉCORD EN VENTAS
-                  </div>
-                  <div className="text-white text-xs font-bold leading-tight tracking-wider uppercase text-left">
-                    Mega Pack<br />
-                    <span className="text-[10px] text-yellow-200 normal-case font-medium">Manos Ágiles</span>
-                  </div>
-                  {/* Decorative kids icon */}
-                  <div className="my-auto text-4xl">👶✍️</div>
-                  <div className="text-white/90 text-[9px] font-sans text-center bg-white/20 py-1 rounded">
-                    +1.250 Actividades
-                  </div>
-                </div>
+            {/* CTA BUTTON (Moved up for desktop) */}
+            <div id="cta-top" className="mt-8 hidden lg:block">
+              <a 
+                href="#pricing-section" 
+                className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-lg transition duration-300 shadow-xl hover:shadow-blue-500/30 active:scale-95 animate-pulse-slow"
+              >
+                <span>Activar Protocolo Neuro-Manos</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <p className="mt-4 text-xs text-stone-500 font-medium flex items-center gap-1.5">
+                <Lock className="w-4 h-4 text-stone-400" /> Acceso inmediato • Pago único
+              </p>
+            </div>
+          </div>
 
-                <p className="text-white font-medium text-sm mt-6 mb-4 flex items-center justify-center gap-1 text-center bg-stone-800/80 px-4 py-1.5 rounded-full backdrop-blur-xs max-w-xs mx-auto">
-                  <Play className="w-4 h-4 text-emerald-400 fill-emerald-400" /> Clic para ver la presentación
-                </p>
+          <div className="mt-12 lg:mt-0">
+            {/* 3. VIDEO / PREVIEW MOCKUP */}
+            <div id="video-preview" className="relative max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-[6px] border-stone-800 bg-stone-900 group">
+              {/* ... existing video preview content ... */}
+              <div className="aspect-video relative flex items-center justify-center bg-stone-950 overflow-hidden">
+                {/* Background elements */}
+                <div className="absolute inset-0 opacity-40 bg-[radial-gradient(#22c55e_1px,transparent_1px)] [background-size:16px_16px]"></div>
                 
-                {/* Big pulse play button */}
-                <button 
-                  onClick={() => setIsPlaying(true)}
-                  className="w-16 h-16 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-110 active:scale-95 duration-200 mx-auto animate-bounce"
-                  aria-label="Reproducir presentación"
-                >
-                  <Play className="w-8 h-8 fill-white ml-1" />
-                </button>
-              </div>
-            ) : (
-              <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 bg-gradient-to-b from-stone-950/20 to-stone-950/90 text-white">
-                <div className="flex justify-between items-center bg-stone-900/50 p-2 rounded backdrop-blur-xs">
-                  <span className="text-xs font-bold text-emerald-400 flex items-center gap-1">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
-                    DEMOSTRACIÓN DEL MATERIAL (+1.250 ACTIVIDADES)
-                  </span>
-                  <button 
-                    onClick={() => setIsPlaying(false)}
-                    className="text-xs bg-stone-800 hover:bg-stone-700 px-2 py-1 rounded"
-                  >
-                    Pausar Demo
-                  </button>
-                </div>
+                {!isPlaying ? (
+                  <div className="relative z-10 p-6 text-center select-none">
+                    {/* Book design mockup preview */}
+                    <div className="relative w-40 h-52 mx-auto bg-gradient-to-tr from-emerald-500 to-green-300 rounded-xl shadow-lg border-2 border-white flex flex-col justify-between p-3 rotate-[-3deg] transition transform hover:rotate-0 hover:scale-105 duration-350">
+                      <div className="absolute -top-3 -right-3 bg-red-500 text-white text-[10px] uppercase font-bold py-1 px-2.5 rounded-full shadow-md transform rotate-12">
+                        RÉCORD EN VENTAS
+                      </div>
+                      <div className="text-white text-xs font-bold leading-tight tracking-wider uppercase text-left">
+                        Mega Pack<br />
+                        <span className="text-[10px] text-yellow-200 normal-case font-medium">Manos Ágiles</span>
+                      </div>
+                      {/* Decorative kids icon */}
+                      <div className="my-auto text-4xl">👶✍️</div>
+                      <div className="text-white/90 text-[9px] font-sans text-center bg-white/20 py-1 rounded">
+                        +1.250 Actividades
+                      </div>
+                    </div>
 
-                {/* Animated content representing the worksheets inside */}
-                <div className="my-auto flex flex-col items-center justify-center text-center p-4">
-                  <div className="w-44 h-44 bg-white text-stone-900 rounded-lg p-3 shadow-2xl border-4 border-emerald-400 flex flex-col items-center justify-between relative transform rotate-1 animate-float">
-                    <span className="absolute top-1.5 left-1.5 text-[8px] bg-red-100 text-red-700 font-bold px-1 rounded">ACTIVIDAD #27</span>
-                    <span className="text-xs font-bold text-stone-500 mt-2">DIBUJO CON HISOPO</span>
-                    <div className="my-auto text-5xl">🍒</div>
-                    <span className="text-[9px] text-stone-405 text-center italic leading-none">Presiona el hisopo con témpera en los círculos designados</span>
+                    <p className="text-white font-medium text-sm mt-6 mb-4 flex items-center justify-center gap-1 text-center bg-stone-800/80 px-4 py-1.5 rounded-full backdrop-blur-xs max-w-xs mx-auto">
+                      <Play className="w-4 h-4 text-emerald-400 fill-emerald-400" /> Clic para ver la presentación
+                    </p>
+                    
+                    {/* Big pulse play button */}
+                    <button 
+                      onClick={() => setIsPlaying(true)}
+                      className="w-16 h-16 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-110 active:scale-95 duration-200 mx-auto animate-bounce"
+                      aria-label="Reproducir presentación"
+                    >
+                      <Play className="w-8 h-8 fill-white ml-1" />
+                    </button>
                   </div>
-                  <p className="text-xs text-white/80 mt-4 max-w-sm">Demostración en video del material listo para imprimir.</p>
-                </div>
+                ) : (
+                  <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 bg-gradient-to-b from-stone-950/20 to-stone-950/90 text-white">
+                    <div className="flex justify-between items-center bg-stone-900/50 p-2 rounded backdrop-blur-xs text-[10px] sm:text-xs">
+                      <span className="font-bold text-emerald-400 flex items-center gap-1">
+                        <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+                        DEMOSTRACIÓN DEL MATERIAL (+1.250 ACTIVIDADES)
+                      </span>
+                      <button 
+                        onClick={() => setIsPlaying(false)}
+                        className="bg-stone-800 hover:bg-stone-700 px-2 py-1 rounded"
+                      >
+                        Pausar Demo
+                      </button>
+                    </div>
 
-                <div className="w-full bg-stone-800 rounded-full h-1.5 overflow-hidden">
-                  <div className="bg-emerald-500 h-1.5 rounded-full transition-all duration-300" style={{ width: `${videoProgress}%` }}></div>
+                    {/* Animated content representing the worksheets inside */}
+                    <div className="my-auto flex flex-col items-center justify-center text-center p-4">
+                      <div className="w-56 h-56 bg-white text-stone-900 rounded-lg p-4 shadow-2xl border-4 border-emerald-400 flex flex-col items-center justify-between relative transform rotate-1 animate-float">
+                        <span className="absolute top-1.5 left-1.5 text-[8px] bg-red-100 text-red-700 font-bold px-1 rounded">ACTIVIDAD #27</span>
+                        <span className="text-xs font-bold text-stone-500 mt-2">DIBUJO CON HISOPO</span>
+                        <div className="my-auto text-6xl">🍒</div>
+                        <span className="text-[9px] text-stone-405 text-center italic leading-tight">Presiona el hisopo con témpera en los círculos designados</span>
+                      </div>
+                      <p className="text-xs text-white/80 mt-6 max-w-sm">Demostración en video del material listo para imprimir.</p>
+                    </div>
+
+                    <div className="w-full bg-stone-800 rounded-full h-1.5 overflow-hidden">
+                      <div className="bg-emerald-500 h-1.5 rounded-full transition-all duration-300" style={{ width: `${videoProgress}%` }}></div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Video overlay decoration */}
+                <div className="absolute bottom-3 left-4 text-[10px] text-stone-400/90 hidden sm:block bg-stone-950/60 p-1.5 rounded">
+                  Duración: 1:32 Minutos • Formato PDF
                 </div>
               </div>
-            )}
-
-            {/* Video overlay decoration */}
-            <div className="absolute bottom-3 left-4 text-[10px] text-stone-400/90 hidden sm:block bg-stone-950/60 p-1.5 rounded">
-              Duración: 1:32 Minutos • Formato PDF
             </div>
           </div>
         </div>
 
-        {/* 4. GREEN CTA BUTTON WITH VALUE PROPOSITION */}
-        <div id="cta-top" className="mt-8 max-w-md mx-auto text-center px-4">
+        {/* 4. MOBILE CTA BUTTON (Visible only on mobile) */}
+        <div id="cta-mobile" className="mt-8 lg:hidden text-center">
           <a 
             href="#pricing-section" 
-            className="group relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm md:text-base transition duration-300 shadow-lg hover:shadow-blue-500/30 active:scale-95 text-center animate-pulse-slow whitespace-nowrap"
+            className="group relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm transition duration-300 shadow-lg hover:shadow-blue-500/30 active:scale-95 animate-pulse-slow"
           >
             <span>Activar Protocolo Neuro-Manos</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <p className="mt-3 text-xs text-stone-500 font-medium flex items-center justify-center gap-1">
-            <Lock className="w-3.5 h-3.5 text-stone-400" /> Acceso inmediato • Pago único • Vitalicio para siempre
+            <Lock className="w-3.5 h-3.5 text-stone-400" /> Acceso inmediato • Pago único
           </p>
         </div>
       </section>
@@ -345,14 +364,14 @@ export default function App() {
               <div className="flex items-start gap-3 bg-red-50/40 p-3.5 rounded-xl border border-red-100/50">
                 <span className="text-lg shrink-0 mt-0.5">❌</span>
                 <div>
-                  <span className="font-bold text-stone-900">Frustración Social:</span> Empiezan a compararse con sus compañeros e inconscientemente se sienten "atrás" ou menos capaces.
+                  <span className="font-bold text-stone-900">Frustración Social:</span> Empiezan a compararse con sus compañeros e inconscientemente se sienten "atrás" o menos capaces.
                 </div>
               </div>
               
               <div className="flex items-start gap-3 bg-red-50/40 p-3.5 rounded-xl border border-red-100/50">
                 <span className="text-lg shrink-0 mt-0.5">❌</span>
                 <div>
-                  <span className="font-bold text-stone-900">Falta de Control:</span> Aprietan el lápiz con demasiada fuerza ou rompen la hoja por no dominar la presión.
+                  <span className="font-bold text-stone-900">Falta de Control:</span> Aprietan el lápiz con demasiada fuerza o rompen la hoja por no dominar la presión.
                 </div>
               </div>
               
@@ -426,7 +445,7 @@ export default function App() {
               >
                 {/* Book Cover Image */}
                 <div className="w-full sm:w-72 shrink-0 relative">
-                  <div className="aspect-[3/4] rounded-2.5xl overflow-hidden shadow-2xl border-4 border-stone-800 transform hover:scale-110 -rotate-2 hover:rotate-0 transition-all duration-500 bg-white p-6 flex items-center justify-center relative z-10">
+                  <div className="aspect-[3/4] rounded-2.5xl overflow-hidden shadow-2xl border-4 border-stone-800 transform hover:scale-110 -rotate-2 hover:rotate-0 transition-all duration-500 bg-white p-10 flex items-center justify-center relative z-10">
                     <img 
                       src={[
                         "https://i.ibb.co/qLRJmSfW/34-1.png",
@@ -602,8 +621,8 @@ export default function App() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-stone-900 mt-2 mb-2">Mira algunos ejemplos reales</h2>
           <p className="text-stone-500 text-xs md:text-sm mb-10 max-w-md mx-auto">Descubre la calidad y riqueza didáctica de nuestras actividades preparadas con mucho cariño:</p>
 
-          {/* Clean preview card with controllers */}
-          <div className="relative max-w-sm sm:max-w-md mx-auto mt-12">
+          {/* Slide preview for Worksheets */}
+          <div className="relative max-w-sm sm:max-w-md lg:max-w-2xl mx-auto mt-12">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeSlide}
@@ -611,10 +630,10 @@ export default function App() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-                className="bg-white rounded-[40px] p-4 shadow-2xl border border-stone-100 flex flex-col items-center select-none overflow-hidden"
+                className="bg-white rounded-[40px] p-6 lg:p-10 shadow-2xl border border-stone-100 flex flex-col items-center select-none overflow-hidden"
               >
                 {/* Book Header Label */}
-                <div className={`w-full py-3 rounded-[30px] mb-4 text-center font-black text-xs uppercase tracking-widest ${WORKSHEET_EXAMPLES[activeSlide].colors[0]} ${WORKSHEET_EXAMPLES[activeSlide].colors[1]}`}>
+                <div className={`w-full py-3 lg:py-4 rounded-[30px] mb-6 lg:mb-10 text-center font-black text-xs lg:text-sm uppercase tracking-widest ${WORKSHEET_EXAMPLES[activeSlide].colors[0]} ${WORKSHEET_EXAMPLES[activeSlide].colors[1]}`}>
                   {WORKSHEET_EXAMPLES[activeSlide].type}
                 </div>
 
@@ -691,9 +710,9 @@ export default function App() {
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                   className="w-full"
                 >
-                  <div className="bg-white rounded-[40px] shadow-2xl border border-stone-100 flex flex-col items-center relative overflow-hidden group">
+                  <div className="bg-white rounded-[40px] shadow-2xl flex flex-col items-center relative overflow-hidden group p-0 md:p-10 max-w-[320px] md:max-w-2xl mx-auto">
                     {/* Only the image (WhatsApp style screenshot) */}
-                    <div className="w-full relative">
+                    <div className="w-full relative overflow-hidden">
                       <img 
                         src={REVIEWS[activeReview].imgUrl} 
                         alt={REVIEWS[activeReview].name}
@@ -763,7 +782,7 @@ export default function App() {
           <div className="absolute inset-0 border-2 border-cyan-400 rounded-[28px] pointer-events-none m-1"></div>
 
           {/* Product Image Mockup at top */}
-          <div className="p-6 pb-0">
+          <div className="p-10 pb-4">
             <div className="rounded-[30px] overflow-hidden shadow-2xl bg-stone-50 border border-stone-100 transform scale-105 transition-transform hover:scale-110 duration-500 relative z-10">
               <img 
                 src="https://i.ibb.co/ynVXjRCX/mega-pack-hero-1.png" 
@@ -906,29 +925,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* 18. BOTTOM STICKY CALL-TO-ACTION */}
-      <div id="sticky-footer" className="bg-[#FFFDF9] border-t-2 border-stone-200 py-3.5 px-4 sticky bottom-0 z-40 shadow-xl hidden sm:block">
-        <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
-          <div className="text-left">
-            <span className="text-[10px] uppercase font-bold text-emerald-600 block leading-none">OFERTA ESPECIAL</span>
-            <span className="font-extrabold text-stone-900 text-sm md:text-base">Protocolo Neuro-Manos 2.0 (+1.250 Actividades)</span>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <div className="text-right">
-              <span className="text-[10px] text-black line-through decoration-red-600 block font-bold">US$ 85</span>
-              <span className="font-black text-stone-900">$7.97 <span className="text-[10px] font-black text-blue-600">USD</span></span>
-            </div>
-
-            <a 
-              href="#pricing-section"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs px-5 py-2.5 rounded-full transition shadow hover:shadow-blue-500/20 active:scale-95 text-center"
-            >
-              COMPRAR AHORA
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* FOOTER */}
       <footer id="footer" className="bg-[#241E1A] text-stone-400 text-[11px] md:text-xs py-10 text-center border-t border-stone-800">

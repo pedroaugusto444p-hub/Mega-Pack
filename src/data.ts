@@ -49,7 +49,7 @@ export const MAIN_BOOKS: ActivityBook[] = [
     pages: "101 páginas",
     pilar: "PILAR DE DENSIDAD TÁCTIL",
     description: "Utiliza la resistencia de materiales como la plastilina o arcilla para construir la fuerza necesaria en los dedos para sostener el lápiz con firmeza.",
-    details: "Potencia su motricidad fina, creatividad y fortalece los músculos de sus dedos com atividades, abecedario, figuras geométricas y más.",
+    details: "Potencia su motricidad fina, creatividad y fortalece los músculos de sus dedos con actividades, abecedario, figuras geométricas y más.",
     coverColor: "from-blue-400 to-indigo-500",
     iconName: "Smile"
   },
@@ -97,7 +97,7 @@ export const FIVE_BONUSES: Bonus[] = [
   {
     id: 2,
     badge: "BONO 2",
-    title: "50 Dibujos para unir con pontos",
+    title: "50 Dibujos para unir con puntos",
     description: "Ayuda a desarrollar concentración y paciencia, reforzar el conocimiento numérico y secuencial, además de estimular la resolución activa de problemas cotidianos.",
     originalPrice: "$17 USD",
     imgUrl: "https://i.ibb.co/mCM5p0XV/50-Dibujos-para-unir-con-puntos.png"
@@ -237,13 +237,43 @@ export const FAQS: FAQItem[] = [
   },
   {
     id: 2,
-    question: "¿Necesito materiales caros?",
-    answer: "¡No! Solo artículos básicos que ya tienes en casa o consigues fácilmente: papel, tijeras escolares, plastilina convencional e hisopos."
+    question: "¿El material es físico o un libro impreso?",
+    answer: "El Protocolo Neuro-Manos 2.0 es un producto 100% digital. Recibirás todo el material inmediatamente en tu correo electrónico en formato PDF de alta calidad, listo para que imprimas solo las hojas que tu hijo va a utilizar. Esto nos permite ofrecerte +1.250 actividades a un precio tan bajo y que tengas el material para siempre, sin esperar semanas por el correo."
   },
   {
     id: 3,
+    question: "¿Necesito materiales caros?",
+    answer: "¡No! El protocolo está diseñado para ser accesible. Solo necesitarás artículos básicos que seguro ya tienes en casa: papel, tijeras escolares, plastilina (arcilla) e hisopos (cotonetes)."
+  },
+  {
+    id: 4,
+    question: "Trabajo todo el día, ¿requiere mucho tiempo por mi parte?",
+    answer: "¡En absoluto! El protocolo está diseñado como un \"Ritual Diario de 15 a 20 Minutos\". No necesitas ser maestra. Las instrucciones son súper sencillas: solo imprimes la actividad del día, le das los materiales básicos a tu hijo y lo acompañas mientras fortalece sus manitas de forma divertida."
+  },
+  {
+    id: 5,
+    question: "Mi hijo tiene 7 años pero aún tiene mala letra. ¿Le sirve este protocolo?",
+    answer: "¡Sí! Aunque está diseñado de forma ideal para la etapa preescolar (3 a 6 años), los pilares de \"Densidad Táctil\" y \"Precisión de Pinza\" son excelentes como terapia correctiva para niños mayores (de 7 y 8 años) que sufren de fatiga al escribir, aprietan mucho el lápiz o tienen trazos irregulares."
+  },
+  {
+    id: 6,
+    question: "¿Esto significa que mi hijo pasará más tiempo frente a una pantalla?",
+    answer: "¡Todo lo contrario! La entrega del material es digital (para ti, como padre), pero la ejecución de tu hijo es 100% práctica, táctil y en papel. Nuestro objetivo principal es alejar a los niños del exceso de pantallas y reconectarlos con el aprendizaje real usando sus propias manos."
+  },
+  {
+    id: 7,
+    question: "¿Puedo pagar en la moneda de mi país? ¿Es un pago seguro?",
+    answer: "¡Sí, totalmente! Al hacer clic en el botón de compra, nuestra plataforma de pago (que cuenta con máxima seguridad bancaria encriptada) convertirá automáticamente los $7.97 USD a tu moneda local. Podrás ver el precio exacto en tu moneda antes de confirmar, y puedes pagar con tarjeta de crédito, débito o métodos locales según tu país."
+  },
+  {
+    id: 8,
+    question: "¿Por cuánto tiempo tendré acceso a los manuales y bonos?",
+    answer: "Tu acceso es vitalicio (para siempre). Pagas una sola vez, sin mensualidades ocultas, y el material es tuyo. Podrás acceder a la plataforma, descargar los archivos cuantas veces quieras e incluso usarlos en el futuro con otros hijos o familiares."
+  },
+  {
+    id: 9,
     question: "¿Y si a mi hijo no le gusta?",
-    answer: "Tienes 7 días de garantía incondicional. Si no cumple tus expectativas o no te gusta el material, te devolvemos el 100% de tu dinero de forma rápida y sencilla."
+    answer: "Tienes 7 días de garantía incondicional. Si notas que el material no se adapta a tu pequeño, simplemente nos envías un correo y te devolvemos el 100% de tu dinero sin hacer preguntas."
   }
 ];
 export const ACHIEVEMENTS: string[] = [
